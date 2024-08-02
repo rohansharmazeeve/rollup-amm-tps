@@ -203,7 +203,7 @@ if __name__ == "__main__":
     mnemonic = open("mnemonic.txt", "r").read()
     start_index = 10 * trader_index
     accounts = generate_ethereum_accounts(mnemonic, count=100)[start_index:start_index+10]
-    objects = [Trader(ChainId.ZKSYNC_ERA_MAINNET, account, swap_txs_count=20) for account in accounts]
+    objects = [Trader(ChainId.LOCAL, account, swap_txs_count=20) for account in accounts]
     # Execute in parallel:
     wait_until_target_time()
     run_in_parallel(objects)

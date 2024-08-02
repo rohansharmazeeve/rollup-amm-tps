@@ -207,11 +207,11 @@ def run_in_parallel(objects):
 
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
-    funder = Account.from_key("<PRIVATE_KEY>")
+    funder = Account.from_key("07372181c7c43bbc6bed75e2c92f58ff5b29458b4019fd4de424b3bc6894e3f8")
     mnemonic = open("mnemonic.txt", "r").read()
     accounts = generate_ethereum_accounts(mnemonic, count=NUM_ACCOUNTS)
     # 1. Fund all accounts:
-    objects = [Preparer(ChainId.ZKSYNC_ERA_MAINNET, funder)]
+    objects = [Preparer(ChainId.LOCAL, funder)]
     # 2. Each account has to wrap enough WETH for swaps (each swap requires 1e-9 WETH)
     # 3. Each account has to approve WETH spending to SMART_ROUTER
     # 4. Check readiness

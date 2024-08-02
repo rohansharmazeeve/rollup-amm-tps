@@ -9,6 +9,7 @@ class ChainId(enum.Enum):
     OPTIMISM_MAINNET = 10
     POLYGON_ZKEVM_MAINNET = 1101
     ZKSYNC_ERA_MAINNET = 324
+    LOCAL=271
 
 
 class Contract(enum.Enum):
@@ -66,6 +67,16 @@ class BlockchainData:
                 Token.WETH: '0x5AEa5775959fBC2557Cc8789bC1bf90A239D9a91'
             },
         ),
+        ChainId.LOCAL: NetworkData(
+            chain_id=271,
+            http_rpc_url='http://74.50.113.128:3050',
+            ws_rpc_url='ws://74.50.113.128:3051',
+            addresses={
+                Contract.PANCAKE_SMART_ROUTER: '0xEc48D41Df9E74CF6BE835b1eFf3096842a91940b',
+                Token.CAKE: '0x098EC7437e2cA864cC46B235c2cA665Ea440dc5d',
+                Token.WETH: '0x959FB0000Df287ca89749E536Fba2000273080eA'
+            }
+        )
     }
 
     def __init__(self, chain_id: ChainId):
