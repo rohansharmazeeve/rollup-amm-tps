@@ -69,12 +69,12 @@ class BlockchainData:
         ),
         ChainId.LOCAL: NetworkData(
             chain_id=271,
-            http_rpc_url='http://74.50.113.128:3050',
-            ws_rpc_url='ws://74.50.113.128:3051',
+            http_rpc_url='http://95.168.169.8:3050',
+            ws_rpc_url='ws://95.168.169.8:3051',
             addresses={
-                Contract.PANCAKE_SMART_ROUTER: '0xEc48D41Df9E74CF6BE835b1eFf3096842a91940b',
-                Token.CAKE: '0x098EC7437e2cA864cC46B235c2cA665Ea440dc5d',
-                Token.WETH: '0x959FB0000Df287ca89749E536Fba2000273080eA'
+                Contract.PANCAKE_SMART_ROUTER: '0xdDb5dCD087C9db2df83DA0835611BD4858Cd0A7D',
+                Token.CAKE: '0x959FB0000Df287ca89749E536Fba2000273080eA',
+                Token.WETH: '0x565bA590389e2C1f21B20f25425E8Df0C6738a08'
             }
         )
     }

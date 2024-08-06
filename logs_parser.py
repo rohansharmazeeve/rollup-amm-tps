@@ -141,9 +141,9 @@ if __name__ == '__main__':
 
     # 2. Create swaps.log: all swaps sorted by timestamp with block information
     # python3 logs_parser.py > logs/swaps.log
-    parse_combined_logs('logs/tps.log', ChainId.ZKSYNC_ERA_MAINNET)
+    # parse_combined_logs('logs/tps.log', ChainId.LOCAL)
 
     # 3. Create tps-results.log: all blocks sorted by timestamp with infromation of txs included
     # python3 logs_parser.py > logs/tps-results.log
-    # parse_swaps('logs/swaps.log')
+    parse_swaps('logs/swaps.log')
     pass
