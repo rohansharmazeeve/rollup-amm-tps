@@ -69,8 +69,8 @@ class BlockchainData:
         ),
         ChainId.LOCAL: NetworkData(
             chain_id=271,
-            http_rpc_url='http://95.168.169.8:3050',
-            ws_rpc_url='ws://95.168.169.8:3051',
+            http_rpc_url='http://149.28.38.98:3050',
+            ws_rpc_url='ws://149.28.38.98:3051',
             addresses={
                 Contract.PANCAKE_SMART_ROUTER: '0xdDb5dCD087C9db2df83DA0835611BD4858Cd0A7D',
                 Token.CAKE: '0x959FB0000Df287ca89749E536Fba2000273080eA',
